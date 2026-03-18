@@ -28,6 +28,7 @@
       <app-schedule-filters
         [filters]="filters()"
         [rinks]="rinks()"
+        [activityTypes]="activityTypes()"
         (filtersChange)="updateFilters($event)"
       />
       <button mat-button class="clear-btn" (click)="clearFilters()">Clear Filters</button>
@@ -41,8 +42,9 @@
     <section class="desktop-calendar">
       <app-schedule-calendar
         [sessions]="sessions()"
-        [selectedDate]="filters().date"
-        (selectedDateChange)="setCalendarDate($event)"
+        [startDate]="filters().startDate"
+        [endDate]="filters().endDate"
+        (dateRangeChange)="setCalendarRange($event.startDate, $event.endDate)"
       />
     </section>
 

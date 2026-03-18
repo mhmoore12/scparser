@@ -43,6 +43,7 @@ export interface ScheduleSession {
   sessionId: number | null;
   activityId: number;
   activityUrl?: string | null;
+  activityType?: string | null;
   eventName: string | null;
   rinkLocation: string | null;
   start: string | null;
@@ -61,6 +62,8 @@ export interface ScheduleSession {
 export interface SessionFilters {
   query: string;
   rinks: string[];
-  date: string;
+  activityTypes: string[];
+  startDate: string;
+  endDate: string;
   availableOnly: boolean;
 }

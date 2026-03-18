@@ -11,7 +11,12 @@ import { ScheduleCalendarComponent } from '../../components/schedule-calendar/sc
 import { SessionCardComponent } from '../../components/session-card/session-card.component';
 import { SchedulePayload, ScheduleSession, SessionFilters } from '../../models/schedule.models';
 import { ScheduleDataService } from '../../services/schedule-data.service';
-import { applySessionFilters, collectRinks, DEFAULT_FILTERS } from '../../utils/schedule-filter.util';
+import {
+  applySessionFilters,
+  collectActivityTypes,
+  collectRinks,
+  DEFAULT_FILTERS,
+} from '../../utils/schedule-filter.util';
 
 @Component({
   selector: 'app-schedule-page',
@@ -39,6 +44,7 @@ export class SchedulePageComponent implements OnInit {
   readonly filters = signal<SessionFilters>(this.loadInitialFilters());
 
   readonly rinks = computed(() => collectRinks(this.payload()?.sessions ?? []));
+  readonly activityTypes = computed(() => collectActivityTypes(this.payload()?.sessions ?? []));
   readonly sessions = computed(() => applySessionFilters(this.payload()?.sessions ?? [], this.filters()));
   readonly groupedSessions = computed(() => this.groupByRink(this.sessions()));
 
@@ -59,8 +65,9 @@ export class SchedulePageComponent implements OnInit {
       .subscribe({
         next: (payload) => {
           this.payload.set(payload);
-          if (!this.filters().date) {
-            this.updateFilters({ ...this.filters(), date: this.todayIsoDate() });
+          if (!this.filters().startDate || !this.filters().endDate) {
+            const today = this.todayIsoDate();
+            this.updateFilters({ ...this.filters(), startDate: today, endDate: today });
           }
           this.loading.set(false);
         },
@@ -77,11 +84,12 @@ export class SchedulePageComponent implements OnInit {
   }
 
   clearFilters(): void {
-    this.updateFilters({ ...DEFAULT_FILTERS, date: this.todayIsoDate() });
+    const today = this.todayIsoDate();
+    this.updateFilters({ ...DEFAULT_FILTERS, startDate: today, endDate: today });
   }
 
-  setCalendarDate(date: string): void {
-    this.filters.set({ ...this.filters(), date });
+  setCalendarRange(startDate: string, endDate: string): void {
+    this.updateFilters({ ...this.filters(), startDate, endDate });
   }
 
   private groupByRink(sessions: ScheduleSession[]): Array<{ rink: string; sessions: ScheduleSession[] }> {
@@ -102,21 +110,39 @@ export class SchedulePageComponent implements OnInit {
     try {
       const raw = localStorage.getItem(SchedulePageComponent.FILTER_STORAGE_KEY);
       if (!raw) {
-        return { ...DEFAULT_FILTERS, date: this.todayIsoDate() };
+        const today = this.todayIsoDate();
+        return { ...DEFAULT_FILTERS, startDate: today, endDate: today };
       }
       const parsed = JSON.parse(raw) as Partial<SessionFilters>;
       const today = this.todayIsoDate();
-      const parsedDate =
-        typeof parsed.date === 'string' && parsed.date ? parsed.date : today;
-      const normalizedDate = parsedDate < today ? today : parsedDate;
+      const legacyDate = (parsed as { date?: string }).date;
+      const rawStart =
+        typeof parsed.startDate === 'string'
+          ? parsed.startDate
+          : typeof legacyDate === 'string'
+            ? legacyDate
+            : '';
+      const rawEnd =
+        typeof parsed.endDate === 'string'
+          ? parsed.endDate
+          : typeof legacyDate === 'string'
+            ? legacyDate
+            : '';
+      const normalizedStart = rawStart && rawStart >= today ? rawStart : today;
+      const normalizedEnd = rawEnd && rawEnd >= normalizedStart ? rawEnd : normalizedStart;
       return {
         query: typeof parsed.query === 'string' ? parsed.query : '',
         rinks: Array.isArray(parsed.rinks) ? parsed.rinks.filter((v) => typeof v === 'string') : [],
-        date: normalizedDate,
+        activityTypes: Array.isArray(parsed.activityTypes)
+          ? parsed.activityTypes.filter((v) => typeof v === 'string')
+          : [],
+        startDate: normalizedStart,
+        endDate: normalizedEnd,
         availableOnly: Boolean(parsed.availableOnly),
       };
     } catch {
-      return { ...DEFAULT_FILTERS, date: this.todayIsoDate() };
+      const today = this.todayIsoDate();
+      return { ...DEFAULT_FILTERS, startDate: today, endDate: today };
     }
   }
 

@@ -3,12 +3,20 @@ import { ScheduleSession, SessionFilters } from '../models/schedule.models';
 export const DEFAULT_FILTERS: SessionFilters = {
   query: '',
   rinks: [],
-  date: '',
+  activityTypes: [],
+  startDate: '',
+  endDate: '',
   availableOnly: false,
 };
 
 export function collectRinks(sessions: ScheduleSession[]): string[] {
   return [...new Set(sessions.map((s) => (s.rinkLocation ?? '').trim()).filter(Boolean))].sort((a, b) =>
+    a.localeCompare(b),
+  );
+}
+
+export function collectActivityTypes(sessions: ScheduleSession[]): string[] {
+  return [...new Set(sessions.map((s) => (s.activityType ?? '').trim()).filter(Boolean))].sort((a, b) =>
     a.localeCompare(b),
   );
 }
@@ -28,7 +36,17 @@ export function applySessionFilters(
       return false;
     }
 
-    if (filters.date && !session.start?.startsWith(filters.date)) {
+    if (filters.activityTypes.length > 0 && !filters.activityTypes.includes(session.activityType ?? '')) {
+      return false;
+    }
+
+    const sessionDate = session.start ? session.start.slice(0, 10) : '';
+
+    if (filters.startDate && (!sessionDate || sessionDate < filters.startDate)) {
+      return false;
+    }
+
+    if (filters.endDate && (!sessionDate || sessionDate > filters.endDate)) {
       return false;
     }
 

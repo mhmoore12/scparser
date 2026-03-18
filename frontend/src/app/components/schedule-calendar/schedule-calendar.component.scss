@@ -11,6 +11,12 @@
   padding: 0.55rem;
 }
 
+.hint {
+  margin: 0 0.55rem 0.45rem;
+  font-size: 0.82rem;
+  color: #3d5a4f;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -54,4 +60,21 @@ h3 {
 :host ::ng-deep .has-session-day > .mat-calendar-body-cell-content {
   background: rgba(0, 132, 61, 0.16);
   border-radius: 999px;
+}
+
+:host ::ng-deep .in-selected-range > .mat-calendar-body-cell-content {
+  background: rgba(0, 132, 61, 0.2);
+  border-radius: 0;
+}
+
+:host ::ng-deep .range-start > .mat-calendar-body-cell-content,
+:host ::ng-deep .range-end > .mat-calendar-body-cell-content {
+  background: rgba(0, 132, 61, 0.9);
+  color: #fff;
+  border-radius: 999px;
+}
+
+:host ::ng-deep .pending-range-start > .mat-calendar-body-cell-content {
+  outline: 2px dashed rgba(0, 132, 61, 0.8);
+  outline-offset: -2px;
 }

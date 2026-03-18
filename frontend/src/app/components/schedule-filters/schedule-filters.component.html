@@ -23,12 +23,35 @@
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <mat-label>Date</mat-label>
+    <mat-label>Activity types</mat-label>
+    <mat-select
+      multiple
+      [value]="filters.activityTypes"
+      (valueChange)="update('activityTypes', $event)"
+    >
+      @for (activityType of activityTypes; track activityType) {
+        <mat-option [value]="activityType">{{ activityType }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Start date</mat-label>
     <input
       matInput
       type="date"
-      [value]="filters.date"
-      (input)="update('date', $any($event.target).value)"
+      [value]="filters.startDate"
+      (input)="update('startDate', $any($event.target).value)"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>End date</mat-label>
+    <input
+      matInput
+      type="date"
+      [value]="filters.endDate"
+      (input)="update('endDate', $any($event.target).value)"
     />
   </mat-form-field>
 

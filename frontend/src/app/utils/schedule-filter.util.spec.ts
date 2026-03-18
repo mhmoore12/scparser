@@ -5,6 +5,7 @@ const sessions: ScheduleSession[] = [
   {
     sessionId: 1,
     activityId: 100,
+    activityType: 'Adult Hockey',
     eventName: 'Drop In Hockey',
     rinkLocation: 'FR - Comerica Center',
     start: '2026-03-20T10:00:00',
@@ -22,6 +23,7 @@ const sessions: ScheduleSession[] = [
   {
     sessionId: 2,
     activityId: 101,
+    activityType: 'Public Programming',
     eventName: 'Public Skate',
     rinkLocation: 'EU - Zubov Rink',
     start: '2026-03-21T09:00:00',
@@ -51,6 +53,25 @@ describe('schedule filter util', () => {
 
   it('filters by availability', () => {
     const result = applySessionFilters(sessions, { ...DEFAULT_FILTERS, availableOnly: true });
+    expect(result.length).toBe(1);
+    expect(result[0].sessionId).toBe(1);
+  });
+
+  it('filters by date range', () => {
+    const result = applySessionFilters(sessions, {
+      ...DEFAULT_FILTERS,
+      startDate: '2026-03-21',
+      endDate: '2026-03-21',
+    });
+    expect(result.length).toBe(1);
+    expect(result[0].sessionId).toBe(2);
+  });
+
+  it('filters by activity type', () => {
+    const result = applySessionFilters(sessions, {
+      ...DEFAULT_FILTERS,
+      activityTypes: ['Adult Hockey'],
+    });
     expect(result.length).toBe(1);
     expect(result[0].sessionId).toBe(1);
   });

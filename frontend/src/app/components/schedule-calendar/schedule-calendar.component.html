@@ -4,6 +4,7 @@
       <h3>Calendar View</h3>
       <button mat-button (click)="clearDate()">Clear date</button>
     </header>
+    <p class="hint">Click a start date, then click an end date to set the range.</p>
     <mat-calendar
       [selected]="selectedDateValue"
       (selectedChange)="onDateChange($event)"
@@ -14,10 +15,14 @@
   <mat-card class="day-panel" appearance="outlined">
     <header>
       <h3>
-        @if (selectedDate) {
-          {{ selectedDate | date: 'EEEE, MMM d, y' }}
+        @if (startDate && endDate) {
+          @if (startDate === endDate) {
+            {{ startDate | date: 'EEEE, MMM d, y' }}
+          } @else {
+            {{ startDate | date: 'MMM d, y' }} - {{ endDate | date: 'MMM d, y' }}
+          }
         } @else {
-          Select a date
+          Select a date range
         }
       </h3>
       <small>{{ selectedDateSessions.length }} sessions</small>

@@ -1,6 +1,15 @@
+:host {
+  display: block;
+  width: 100%;
+  overflow-x: clip;
+}
+
 .topbar {
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 10;
   min-height: 66px;
   background: linear-gradient(96deg, #111111 0%, #0f3b29 48%, #172127 100%);
@@ -8,7 +17,9 @@
   display: flex;
   justify-content: space-between;
   gap: 0.75rem;
-  padding-inline: clamp(0.65rem, 2vw, 1.2rem);
+  padding-left: max(0.65rem, env(safe-area-inset-left));
+  padding-right: max(0.65rem, env(safe-area-inset-right));
+  border-radius: 0;
 }
 
 .brand {
@@ -61,16 +72,20 @@
 
 .page-wrap {
   max-width: 1180px;
+  width: 100%;
   margin: 0.75rem auto 1.15rem;
   padding: 0 0.75rem;
   display: grid;
   gap: 0.7rem;
+  min-width: 0;
 }
 
 .filter-card {
   padding: 0.65rem 0.7rem;
   border-radius: 14px;
   border-color: rgba(16, 24, 32, 0.12);
+  min-width: 0;
+  overflow: clip;
 }
 
 .clear-btn {
@@ -102,8 +117,9 @@
 
 .session-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 0.62rem;
+  min-width: 0;
 }
 
 .rink-tabs {
@@ -111,15 +127,22 @@
   border-radius: 12px;
   background: #f8fbf9;
   padding: 0 0.2rem 0.35rem;
+  min-width: 0;
+  overflow: clip;
 }
 
 .tab-content {
   padding: 0.65rem 0.25rem 0.25rem;
+  min-width: 0;
 }
 
 :host ::ng-deep .rink-tabs .mdc-tab__text-label {
   font-weight: 600;
   color: #17362d;
+  max-width: 11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 :host ::ng-deep .rink-tabs .mdc-tab--active .mdc-tab__text-label {
