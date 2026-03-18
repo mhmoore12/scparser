@@ -23,6 +23,9 @@ export class ScheduleDataService {
         const activityUrlById = new Map(
           payload.activities.map((activity) => [activity.activityId, activity.activityUrl]),
         );
+        const activityTypeById = new Map(
+          payload.activities.map((activity) => [activity.activityId, activity.activityType]),
+        );
 
         return {
           ...payload,
@@ -30,6 +33,7 @@ export class ScheduleDataService {
             .map((session) => ({
               ...session,
               activityUrl: activityUrlById.get(session.activityId) ?? null,
+              activityType: activityTypeById.get(session.activityId) ?? null,
               rinkLocation: normalizeRink(session.rinkLocation),
             }))
             .sort((a, b) => {

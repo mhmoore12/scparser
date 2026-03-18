@@ -1,6 +1,8 @@
 .session-card {
   border-color: rgba(16, 24, 32, 0.12);
   border-radius: 16px;
+  min-width: 0;
+  padding: 0.5rem;
 }
 
 .card-head {
@@ -14,6 +16,7 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.25rem;
     letter-spacing: 0.02em;
+    overflow-wrap: anywhere;
   }
 
   p {
@@ -22,6 +25,7 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
+    overflow-wrap: anywhere;
   }
 
   mat-icon {
@@ -58,4 +62,8 @@ mat-chip.sold-out {
     background: linear-gradient(90deg, var(--stars-green) 0%, var(--stars-green) 100%);
     transition: width 180ms ease-out;
   }
+}
+
+:host ::ng-deep .session-card .mat-mdc-card-actions {
+  padding: 0.35rem 0 0;
 }

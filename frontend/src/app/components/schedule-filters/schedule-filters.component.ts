@@ -15,6 +15,7 @@ import { SessionFilters } from '../../models/schedule.models';
 export class ScheduleFiltersComponent {
   @Input({ required: true }) filters!: SessionFilters;
   @Input() rinks: string[] = [];
+  @Input() activityTypes: string[] = [];
   @Output() readonly filtersChange = new EventEmitter<SessionFilters>();
 
   update<K extends keyof SessionFilters>(key: K, value: SessionFilters[K]): void {
