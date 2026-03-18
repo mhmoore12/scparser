@@ -1,0 +1,73 @@
+<mat-toolbar class="topbar">
+  <div class="brand">
+    <span class="crest">SC</span>
+    <div>
+      <strong>StarCenter Session Board</strong>
+      <small>
+        Single-session schedule feed
+        @if (updatedAt()) {
+          · Updated {{ updatedAt() | date: 'MMM d, y h:mm a' }}
+        }
+      </small>
+    </div>
+  </div>
+  <button mat-stroked-button class="refresh" (click)="refresh()">Refresh</button>
+</mat-toolbar>
+
+@if (loading()) {
+  <app-loading-state message="Pulling the latest StarCenter sessions"></app-loading-state>
+} @else if (error()) {
+  <section class="state-box">
+    <h2>Could not load schedule feed</h2>
+    <p>{{ error() }}</p>
+    <button mat-flat-button (click)="refresh()">Try again</button>
+  </section>
+} @else if (payload()) {
+  <main class="page-wrap">
+    <mat-card class="filter-card" appearance="outlined">
+      <app-schedule-filters
+        [filters]="filters()"
+        [rinks]="rinks()"
+        (filtersChange)="updateFilters($event)"
+      />
+      <button mat-button class="clear-btn" (click)="clearFilters()">Clear Filters</button>
+    </mat-card>
+
+    <section class="results-bar">
+      <h2>{{ sessions().length }} sessions match</h2>
+      <span>Grouped across {{ groupedSessions().length }} rinks</span>
+    </section>
+
+    <section class="desktop-calendar">
+      <app-schedule-calendar
+        [sessions]="sessions()"
+        [selectedDate]="filters().date"
+        (selectedDateChange)="setCalendarDate($event)"
+      />
+    </section>
+
+    @if (groupedSessions().length > 0) {
+      <mat-tab-group class="rink-tabs" animationDuration="200ms">
+        @for (group of groupedSessions(); track group.rink) {
+          <mat-tab>
+            <ng-template mat-tab-label>
+              {{ group.rink }} ({{ group.sessions.length }})
+            </ng-template>
+            <section class="tab-content">
+              <div class="session-grid">
+                @for (session of group.sessions; track session.sessionId ?? $index) {
+                  <app-session-card [session]="session" />
+                }
+              </div>
+            </section>
+          </mat-tab>
+        }
+      </mat-tab-group>
+    } @else {
+      <mat-card class="empty" appearance="outlined">
+        <h3>No sessions match your filters.</h3>
+        <p>Try clearing filters or widening your date and rink selection.</p>
+      </mat-card>
+    }
+  </main>
+}

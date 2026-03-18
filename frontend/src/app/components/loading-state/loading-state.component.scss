@@ -1,0 +1,14 @@
+.loading-wrap {
+  min-height: 45vh;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  color: #1e2a32;
+  text-align: center;
+  padding: 2rem;
+}
+
+p {
+  margin: 0;
+  font-weight: 600;
+}

@@ -1,0 +1,84 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+:root {
+  --stars-green: #00843d;  
+  --stars-silver: #a7a9ac;
+  --stars-black: #111111;
+  --stars-ice: #eef3f1;
+  --stars-white: #f8fbf9;
+}
+
+$stars-primary-palette: (
+  0: #000000,
+  10: #00210f,
+  20: #00391d,
+  25: #004625,
+  30: #00532d,
+  35: #006035,
+  40: #00843d,
+  50: #239d57,
+  60: #47b670,
+  70: #67cf89,
+  80: #86e9a3,
+  90: #b3f5c5,
+  95: #d3fbdc,
+  98: #ecfff0,
+  99: #f6fff7,
+  100: #ffffff,
+);
+
+$stars-tertiary-palette: (
+  0: #000000,
+  10: #1b1c1d,
+  20: #313335,
+  25: #3c3d3f,
+  30: #484a4c,
+  35: #545658,
+  40: #616365,
+  50: #7b7d80,
+  60: #95989a,
+  70: #b0b2b5,
+  80: #cbced0,
+  90: #e7e9eb,
+  95: #f5f7f8,
+  98: #fbfcfd,
+  99: #fdfdfe,
+  100: #ffffff,
+);
+
+$stars-primary: map.merge(mat.$green-palette, $stars-primary-palette);
+$stars-tertiary: map.merge(mat.$cyan-palette, $stars-tertiary-palette);
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: $stars-primary,
+        tertiary: $stars-tertiary,
+      ),
+      typography: "Barlow, sans-serif",
+      density: 0,
+    )
+  );
+}
+
+body {
+  color-scheme: light;
+  background:
+    radial-gradient(circle at top right, rgba(0, 132, 61, 0.16), transparent 38%),
+    radial-gradient(circle at top left, rgba(167, 169, 172, 0.2), transparent 45%),
+    linear-gradient(160deg, #f7faf8 0%, #edf4f1 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  color: var(--stars-black);
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  min-height: 100dvh;
+}
+
+* {
+  box-sizing: border-box;
+}

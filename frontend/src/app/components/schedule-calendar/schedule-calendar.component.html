@@ -1,0 +1,38 @@
+<section class="calendar-layout">
+  <mat-card class="calendar-panel" appearance="outlined">
+    <header>
+      <h3>Calendar View</h3>
+      <button mat-button (click)="clearDate()">Clear date</button>
+    </header>
+    <mat-calendar
+      [selected]="selectedDateValue"
+      (selectedChange)="onDateChange($event)"
+      [dateClass]="dateClass"
+    />
+  </mat-card>
+
+  <mat-card class="day-panel" appearance="outlined">
+    <header>
+      <h3>
+        @if (selectedDate) {
+          {{ selectedDate | date: 'EEEE, MMM d, y' }}
+        } @else {
+          Select a date
+        }
+      </h3>
+      <small>{{ selectedDateSessions.length }} sessions</small>
+    </header>
+
+    <div class="day-list">
+      @for (session of selectedDateSessions; track session.sessionId ?? $index) {
+        <article>
+          <strong>{{ session.start | date: 'h:mm a' }} - {{ session.end | date: 'h:mm a' }}</strong>
+          <span>{{ session.eventName }}</span>
+          <small>{{ session.rinkLocation }} · {{ session.slotsAvailable ?? 0 }} open</small>
+        </article>
+      } @empty {
+        <p>No sessions for this date.</p>
+      }
+    </div>
+  </mat-card>
+</section>

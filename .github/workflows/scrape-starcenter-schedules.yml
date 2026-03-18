@@ -1,0 +1,47 @@
+name: Scrape StarCenter Schedules
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 10 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run scraper
+        run: |
+          node scripts/scrape-starcenter-schedules.mjs --out=data/starcenter-schedules.json
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: starcenter-schedules
+          path: data/starcenter-schedules.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Commit latest JSON for raw URL access
+        run: |
+          if git diff --quiet -- data/starcenter-schedules.json; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/starcenter-schedules.json
+          git commit -m "chore(data): update StarCenter schedules [skip ci]"
+          git push

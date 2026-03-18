@@ -1,0 +1,57 @@
+.calendar-layout {
+  display: grid;
+  grid-template-columns: minmax(340px, 380px) minmax(0, 1fr);
+  gap: 0.8rem;
+}
+
+.calendar-panel,
+.day-panel {
+  border-radius: 14px;
+  border-color: rgba(16, 24, 32, 0.12);
+  padding: 0.55rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.35rem 0.45rem 0.55rem;
+}
+
+h3 {
+  margin: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+}
+
+.day-list {
+  max-height: 360px;
+  overflow: auto;
+  display: grid;
+  gap: 0.55rem;
+  padding: 0.2rem;
+
+  article {
+    border: 1px solid rgba(16, 24, 32, 0.12);
+    border-radius: 10px;
+    padding: 0.55rem;
+    background: #fbfdfc;
+    display: grid;
+    gap: 0.18rem;
+  }
+
+  span {
+    color: #17382f;
+    font-weight: 600;
+  }
+
+  small {
+    color: #40574e;
+  }
+}
+
+:host ::ng-deep .has-session-day > .mat-calendar-body-cell-content {
+  background: rgba(0, 132, 61, 0.16);
+  border-radius: 999px;
+}

@@ -1,0 +1,152 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: 66px;
+  background: linear-gradient(96deg, #111111 0%, #0f3b29 48%, #172127 100%);
+  color: #f4f8f6;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-inline: clamp(0.65rem, 2vw, 1.2rem);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  .crest {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--stars-green);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.06em;
+  }
+
+  strong {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.03em;
+  }
+
+  small {
+    opacity: 0.82;
+    font-size: 0.82rem;
+  }
+}
+
+.refresh {
+  --mdc-outlined-button-label-text-color: #f8fbf9;
+  --mdc-outlined-button-outline-color: rgba(248, 251, 249, 0.66);
+  --mdc-outlined-button-hover-label-text-color: #f8fbf9;
+  --mat-outlined-button-state-layer-color: #f8fbf9;
+  color: #f8fbf9 !important;
+  border-color: rgba(248, 251, 249, 0.66) !important;
+}
+
+:host ::ng-deep .topbar .refresh .mdc-button__label,
+:host ::ng-deep .topbar .refresh .mat-icon {
+  color: #f8fbf9 !important;
+}
+
+:host ::ng-deep .topbar .refresh .mat-mdc-button-touch-target::before {
+  background: rgba(248, 251, 249, 0.12);
+}
+
+.page-wrap {
+  max-width: 1180px;
+  margin: 0.75rem auto 1.15rem;
+  padding: 0 0.75rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.filter-card {
+  padding: 0.65rem 0.7rem;
+  border-radius: 14px;
+  border-color: rgba(16, 24, 32, 0.12);
+}
+
+.clear-btn {
+  margin-top: 0.1rem;
+}
+
+.desktop-calendar {
+  display: block;
+}
+
+.results-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+
+  h2 {
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.45rem;
+    letter-spacing: 0.03em;
+  }
+
+  span {
+    color: #3a4a43;
+  }
+}
+
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.62rem;
+}
+
+.rink-tabs {
+  border: 1px solid rgba(16, 24, 32, 0.12);
+  border-radius: 12px;
+  background: #f8fbf9;
+  padding: 0 0.2rem 0.35rem;
+}
+
+.tab-content {
+  padding: 0.65rem 0.25rem 0.25rem;
+}
+
+:host ::ng-deep .rink-tabs .mdc-tab__text-label {
+  font-weight: 600;
+  color: #17362d;
+}
+
+:host ::ng-deep .rink-tabs .mdc-tab--active .mdc-tab__text-label {
+  color: var(--stars-green);
+}
+
+.state-box,
+.empty {
+  max-width: 720px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1.25rem;
+  border-radius: 14px;
+}
+
+@media (max-width: 840px) {
+  .brand small {
+    display: none;
+  }
+
+  .topbar {
+    min-height: 62px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .desktop-calendar {
+    display: none;
+  }
+}

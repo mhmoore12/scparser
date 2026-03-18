@@ -1,0 +1,32 @@
+<mat-card class="session-card" appearance="outlined">
+  <div class="card-head">
+    <div>
+      <h3>{{ session.eventName || 'Untitled Session' }}</h3>
+      <p>
+        <mat-icon>location_on</mat-icon>
+        {{ session.rinkLocation || 'Rink TBD' }}
+      </p>
+    </div>
+    <mat-chip [highlighted]="true" [class.sold-out]="(session.slotsAvailable ?? 0) <= 0">
+      {{ session.slotsAvailable ?? 0 }} / {{ session.totalSlots ?? '?' }} open
+    </mat-chip>
+  </div>
+
+  <div class="meta-row">
+    <span>{{ session.start | date: 'EEE, MMM d' }}</span>
+    <span>{{ session.start | date: 'h:mm a' }} - {{ session.end | date: 'h:mm a' }}</span>
+    <span>ID {{ session.sessionId }}</span>
+  </div>
+
+  <div class="occupancy">
+    <div [style.width.%]="occupancyRatio * 100"></div>
+  </div>
+
+  @if (session.activityUrl) {
+    <mat-card-actions align="end">
+      <a mat-button color="primary" [href]="session.activityUrl" target="_blank" rel="noopener">
+        Sign Up
+      </a>
+    </mat-card-actions>
+  }
+</mat-card>
