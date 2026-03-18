@@ -1,11 +1,9 @@
 name: Deploy Frontend To GitHub Pages
 
 on:
-  pull_request:
+  push:
     branches:
       - web
-    types:
-      - closed
 
 permissions:
   contents: read
@@ -18,7 +16,6 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -26,8 +23,6 @@ jobs:
     steps:
       - name: Checkout merged commit
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.merge_commit_sha }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
