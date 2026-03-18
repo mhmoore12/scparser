@@ -91,3 +91,5 @@ Build:
 cd frontend
 npm run build
 ```
+
+## Pages
