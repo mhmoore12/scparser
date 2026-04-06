@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - web
+  pull_request:
+    branches:
+      - web
+    types:
+      - closed
 
 permissions:
   contents: read
@@ -23,6 +28,8 @@ jobs:
     steps:
       - name: Checkout merged commit
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
