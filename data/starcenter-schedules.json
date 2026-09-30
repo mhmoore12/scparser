@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T16:31:46.597Z",
+  "generatedAt": "2026-09-30T16:25:22.355Z",
   "source": {
     "activityListUrl": "https://starcenter.finnlyconnect.com/registration/activitylist",
     "activityBaseUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/",
@@ -9,15 +9,15 @@
     "purchaseType": "Single Session",
     "keywords": [],
     "maxActivities": null,
-    "fromDate": "2026-09-29"
+    "fromDate": "2026-09-30"
   },
   "totals": {
-    "allActivities": 261,
-    "matchedSingleSessionActivities": 144,
+    "allActivities": 254,
+    "matchedSingleSessionActivities": 141,
     "scrapedActivities": 0,
     "activitiesWithSessions": 0,
     "sessionCount": 0,
-    "errors": 144
+    "errors": 141
   },
   "activities": [],
   "sessions": [],
@@ -35,15 +35,9 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 35048,
-      "activityName": "Euless - Adult Stick & Puck Skater",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35048",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 33484,
-      "activityName": "Euless - Dean Private Drop In GOALIE",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33484",
+      "activityId": 34669,
+      "activityName": "Euless - Adult Hockey Academy 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34669",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -53,9 +47,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 34669,
-      "activityName": "Euless - Adult Hockey Academy 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34669",
+      "activityId": 35048,
+      "activityName": "Euless - Adult Stick & Puck Skater",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35048",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 33484,
+      "activityName": "Euless - Dean Private Drop In GOALIE",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33484",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -71,9 +71,9 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 34709,
-      "activityName": "Euless - High Freestyle (Skater)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34709",
+      "activityId": 33403,
+      "activityName": "Euless - Hockey Pro Time CORNER 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33403",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -83,27 +83,27 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 33403,
-      "activityName": "Euless - Hockey Pro Time CORNER 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33403",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 34711,
       "activityName": "Euless - High Freestyle (On-Staff Coach)",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34711",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 33411,
-      "activityName": "Euless - Homeschool Parent Child Hockey",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33411",
+      "activityId": 34709,
+      "activityName": "Euless - High Freestyle (Skater)",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34709",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
       "activityId": 33407,
       "activityName": "Euless - Hockey Pro Time NEUTRAL 2026/2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33407",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 33411,
+      "activityName": "Euless - Homeschool Parent Child Hockey",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33411",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -137,9 +137,21 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
+      "activityId": 34729,
+      "activityName": "Euless - Open Freestyle (On-Staff Coach) 2026-2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34729",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
       "activityId": 33492,
       "activityName": "Euless - Public Skate",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33492",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 34731,
+      "activityName": "Euless - Skating Pro Time On Staff Coach",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34731",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -149,21 +161,9 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 34729,
-      "activityName": "Euless - Open Freestyle (On-Staff Coach) 2026-2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34729",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 34727,
       "activityName": "Euless - Open Freestyle (Skater)",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34727",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 34731,
-      "activityName": "Euless - Skating Pro Time On Staff Coach",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34731",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -239,9 +239,21 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
+      "activityId": 32351,
+      "activityName": "Farmers Branch - Hockey Pro Time 2026-2027 (CORNER)",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32351",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
       "activityId": 32354,
       "activityName": "Farmers Branch - Hockey Pro Time 2026-2027 (NEUTRAL)",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32354",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32273,
+      "activityName": "Farmers Branch - Freestyle (On-Staff Coach) 2026-2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32273",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -251,21 +263,9 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32351,
-      "activityName": "Farmers Branch - Hockey Pro Time 2026-2027 (CORNER)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32351",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 31066,
       "activityName": "Farmers Branch - Homeschool Public Skate 2026-2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/31066",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 32273,
-      "activityName": "Farmers Branch - Freestyle (On-Staff Coach) 2026-2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32273",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -281,9 +281,9 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32355,
-      "activityName": "Farmers Branch - Public Skate (2026-2027)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32355",
+      "activityId": 34286,
+      "activityName": "Farmers Branch - Sled Hockey Academy (Saturdays) ADULTS",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34286",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -299,9 +299,9 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 34286,
-      "activityName": "Farmers Branch - Sled Hockey Academy (Saturdays) ADULTS",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34286",
+      "activityId": 32355,
+      "activityName": "Farmers Branch - Public Skate (2026-2027)",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32355",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -323,21 +323,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 35862,
-      "activityName": "Frisco - ADULT ONLY PUBLIC SEPT/OCT",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35862",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 33808,
-      "activityName": "Farmers Branch Hockey Academy Drop In  (2026-2027)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33808",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 48265,
       "activityName": "FR -Pearson Spirit Night",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/48265",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 35862,
+      "activityName": "Frisco - ADULT ONLY PUBLIC SEPT/OCT",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35862",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -353,6 +347,12 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
+      "activityId": 32664,
+      "activityName": "Frisco - Open Freestyle Guest Coach 26/27",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32664",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
       "activityId": 30980,
       "activityName": "Frisco - Hockey Pro Time 26/27",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/30980",
@@ -362,12 +362,6 @@
       "activityId": 32415,
       "activityName": "Frisco - Open Freestyle On Staff Coach 26/27",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32415",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 32664,
-      "activityName": "Frisco - Open Freestyle Guest Coach 26/27",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32664",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -389,15 +383,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 35866,
-      "activityName": "Girls Jamboree (2026 - 2027)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35866",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 30835,
       "activityName": "Mansfield - Hockey Pro Time 2026-2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/30835",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 35866,
+      "activityName": "Girls Jamboree (2026 - 2027)",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35866",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -425,15 +419,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 30855,
-      "activityName": "Mansfield Drop In Goalie 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/30855",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 33545,
       "activityName": "Mansfield Drop In Hockey Academy 2026-2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/33545",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 30855,
+      "activityName": "Mansfield Drop In Goalie 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/30855",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -449,15 +443,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 30872,
-      "activityName": "Mansfield Open Freestyle (On Staff Coach) 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/30872",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 30836,
       "activityName": "Mansfield Open Freestyle (Skater) 2026/2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/30836",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 30872,
+      "activityName": "Mansfield Open Freestyle (On Staff Coach) 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/30872",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -503,15 +497,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32752,
-      "activityName": "McKinney - Parent & Child Hockey 2026-2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32752",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 32565,
       "activityName": "McKinney - Hockey Pro Time 2026-2027 ",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32565",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32752,
+      "activityName": "McKinney - Parent & Child Hockey 2026-2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32752",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -569,12 +563,6 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32592,
-      "activityName": "McKinney Youth Open Hockey - 13-18 2026-2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32592",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 32571,
       "activityName": "McKinney- Freestyle (On Staff Coach) 2026-2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32571",
@@ -584,6 +572,12 @@
       "activityId": 32572,
       "activityName": "McKinney- Open Freestyle (Skater) 2026-2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32572",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32592,
+      "activityName": "McKinney Youth Open Hockey - 13-18 2026-2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32592",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -641,33 +635,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32339,
-      "activityName": "Plano - Parent & Child Hockey (26/27)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32339",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 32328,
-      "activityName": "Plano - Public Skate (26/27)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32328",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 46914,
-      "activityName": "Plano - September Adult Shooting Room Class (Tuesdays & Thursdays)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/46914",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 46913,
-      "activityName": "Plano - September Youth Shooting Room Class (Tuesdays & Thursdays)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/46913",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 32924,
       "activityName": "Plano - Open Freestyle ON STAFF Coach (26/27)",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32924",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32339,
+      "activityName": "Plano - Parent & Child Hockey (26/27)",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32339",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -680,6 +656,12 @@
       "activityId": 31531,
       "activityName": "Plano - Women's Hockey Academy (26/27)",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/31531",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32328,
+      "activityName": "Plano - Public Skate (26/27)",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32328",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -707,15 +689,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32101,
-      "activityName": "Richardson - 45+ Drop-In - Skater 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32101",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 32104,
       "activityName": "Richardson - Adult Drop-In - Goalie 2026/2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32104",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32101,
+      "activityName": "Richardson - 45+ Drop-In - Skater 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32101",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -725,15 +707,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32587,
-      "activityName": "Richardson - Adult Hockey Academy 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32587",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 32246,
       "activityName": "Richardson - Adult Stick & Puck - Goalie 2026/2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32246",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32587,
+      "activityName": "Richardson - Adult Hockey Academy 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32587",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -743,15 +725,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32123,
-      "activityName": "Richardson - Dudo Drop-In - Goalie (Invite Only) 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32123",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 48678,
       "activityName": "Richardson - Apollo Junior High PTA Fundraiser - 2/20/2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/48678",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32123,
+      "activityName": "Richardson - Dudo Drop-In - Goalie (Invite Only) 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32123",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -761,21 +743,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 47865,
-      "activityName": "Richardson - Halloween Public Skate",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/47865",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
       "activityId": 32248,
       "activityName": "Richardson - Hockey Pro Time - Corner 2026/2027",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32248",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 34927,
-      "activityName": "Richardson - Homeschool Public Skate 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34927",
+      "activityId": 47865,
+      "activityName": "Richardson - Halloween Public Skate",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/47865",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -785,15 +761,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32257,
-      "activityName": "Richardson - Open Freestyle - Guest Coach 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32257",
+      "activityId": 34927,
+      "activityName": "Richardson - Homeschool Public Skate 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/34927",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32259,
-      "activityName": "Richardson - Open Freestyle - On Staff Coach 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32259",
+      "activityId": 32257,
+      "activityName": "Richardson - Open Freestyle - Guest Coach 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32257",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -809,15 +785,9 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32109,
-      "activityName": "Richardson - PRIVATE Adult Drop-In 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32109",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 32114,
-      "activityName": "Richardson - Public Skate 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32114",
+      "activityId": 32259,
+      "activityName": "Richardson - Open Freestyle - On Staff Coach 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32259",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -827,9 +797,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32262,
-      "activityName": "Richardson - Skating Pro Time - Guest Coach/Skater 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32262",
+      "activityId": 32109,
+      "activityName": "Richardson - PRIVATE Adult Drop-In 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32109",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32114,
+      "activityName": "Richardson - Public Skate 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32114",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -845,9 +821,15 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32130,
-      "activityName": "Richardson - Youth Open Hockey - Homeschool/All Ages 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32130",
+      "activityId": 32128,
+      "activityName": "Richardson - Youth Open Hockey - 12U 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32128",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 32262,
+      "activityName": "Richardson - Skating Pro Time - Guest Coach/Skater 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32262",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -857,15 +839,9 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 32128,
-      "activityName": "Richardson - Youth Open Hockey - 12U 2026/2027",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32128",
-      "error": "Marker not found: window.ActivityItemManager._activity ="
-    },
-    {
-      "activityId": 35897,
-      "activityName": "Xtreme Power Skating Clincs (2026-2027)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35897",
+      "activityId": 32130,
+      "activityName": "Richardson - Youth Open Hockey - Homeschool/All Ages 2026/2027",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/32130",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -875,9 +851,9 @@
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
-      "activityId": 35906,
-      "activityName": "Xtreme Shooting Clinics (2026-2027)",
-      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35906",
+      "activityId": 35897,
+      "activityName": "Xtreme Power Skating Clincs (2026-2027)",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35897",
       "error": "Marker not found: window.ActivityItemManager._activity ="
     },
     {
@@ -885,11 +861,17 @@
       "activityName": "Xtreme Stick Skills Clinics (2026-2027)",
       "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35918",
       "error": "Marker not found: window.ActivityItemManager._activity ="
+    },
+    {
+      "activityId": 35906,
+      "activityName": "Xtreme Shooting Clinics (2026-2027)",
+      "activityUrl": "https://starcenter.finnlyconnect.com/registration/activityitem/35906",
+      "error": "Marker not found: window.ActivityItemManager._activity ="
     }
   ],
   "timing": {
-    "startedAt": "2026-09-29T16:31:27.884Z",
-    "completedAt": "2026-09-29T16:31:46.597Z",
-    "durationSeconds": 18.713
+    "startedAt": "2026-09-30T16:25:05.115Z",
+    "completedAt": "2026-09-30T16:25:22.356Z",
+    "durationSeconds": 17.241
   }
 }
